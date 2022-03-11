@@ -46,7 +46,7 @@ function HomeScreen() {
       <Helmet>
         <title>Ecuastore</title>
       </Helmet>
-      <h1>Productos Destacados</h1>
+      <h1>Productos Destacados Probando Git</h1>
       <div className="products">
         {loading ? (
           <div>Cargando...</div>
