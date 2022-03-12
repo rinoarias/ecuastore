@@ -18,7 +18,8 @@ productRouter.post(
     const newProduct = new Product({
       name: 'producto ejemplo ' + Date.now(),
       slug: 'producto-ejemplo-' + Date.now(),
-      image: '/images/p1.jpg',
+      image:
+        'https://res.cloudinary.com/rinoarias/image/upload/v1647100520/glpceltbpt7fdbtsmmwz.jpg',
       price: 0,
       category: 'categoria ejemplo',
       brand: 'marca ejemplo',
@@ -49,7 +50,22 @@ productRouter.put(
       product.countInStock = req.body.countInStock;
       product.description = req.body.description;
       await product.save();
-      res.send({ message: 'Producto Actualizado' });
+      res.send({ message: 'Product Actualizado' });
+    } else {
+      res.status(404).send({ message: 'Producto no encontrado' });
+    }
+  })
+);
+
+productRouter.delete(
+  '/:id',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const product = await Product.findById(req.params.id);
+    if (product) {
+      await product.remove();
+      res.send({ message: 'Producto Eliminado' });
     } else {
       res.status(404).send({ message: 'Producto No Encontrado' });
     }

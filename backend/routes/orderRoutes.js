@@ -6,6 +6,17 @@ import Product from '../models/productModel.js';
 import { isAuth, isAdmin } from '../utils.js';
 
 const orderRouter = express.Router();
+
+orderRouter.get(
+  '/',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const orders = await Order.find().populate('user', 'name');
+    res.send(orders);
+  })
+);
+
 orderRouter.post(
   '/',
   isAuth,
@@ -22,7 +33,7 @@ orderRouter.post(
     });
 
     const order = await newOrder.save();
-    res.status(201).send({ message: 'Nueva Orden Creada', order });
+    res.status(201).send({ message: 'Nuevo Pedido Creado', order });
   })
 );
 
@@ -87,7 +98,23 @@ orderRouter.get(
     if (order) {
       res.send(order);
     } else {
-      res.status(404).send({ message: 'Orden No Encontrada' });
+      res.status(404).send({ message: 'Pedido no encontrado' });
+    }
+  })
+);
+
+orderRouter.put(
+  '/:id/deliver',
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const order = await Order.findById(req.params.id);
+    if (order) {
+      order.isDelivered = true;
+      order.deliveredAt = Date.now();
+      await order.save();
+      res.send({ message: 'Pedido Enviado' });
+    } else {
+      res.status(404).send({ message: 'Pedido no encontrado' });
     }
   })
 );
@@ -108,9 +135,24 @@ orderRouter.put(
       };
 
       const updatedOrder = await order.save();
-      res.send({ message: 'Orden Pagada', order: updatedOrder });
+      res.send({ message: 'Pedido Pagado', order: updatedOrder });
     } else {
-      res.status(404).send({ message: 'Orden No Encontrada' });
+      res.status(404).send({ message: 'Pedido no encontrado' });
+    }
+  })
+);
+
+orderRouter.delete(
+  '/:id',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const order = await Order.findById(req.params.id);
+    if (order) {
+      await order.remove();
+      res.send({ message: 'Pedido Eliminado' });
+    } else {
+      res.status(404).send({ message: 'Pedido no encontrado' });
     }
   })
 );

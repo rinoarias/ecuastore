@@ -2,10 +2,72 @@ import express from 'express';
 import bcrypt from 'bcryptjs';
 import expressAsyncHandler from 'express-async-handler';
 import User from '../models/userModel.js';
-import { isAuth, generateToken } from '../utils.js';
+import { isAuth, isAdmin, generateToken } from '../utils.js';
 
 const userRouter = express.Router();
 
+userRouter.get(
+  '/',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const users = await User.find({});
+    res.send(users);
+  })
+);
+
+userRouter.get(
+  '/:id',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const user = await User.findById(req.params.id);
+    if (user) {
+      res.send(user);
+    } else {
+      res.status(404).send({ message: 'Usuario no encontrado' });
+    }
+  })
+);
+
+userRouter.put(
+  '/:id',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const user = await User.findById(req.params.id);
+    if (user) {
+      user.name = req.body.name || user.name;
+      user.email = req.body.email || user.email;
+      user.isAdmin = Boolean(req.body.isAdmin);
+      const updatedUser = await user.save();
+      res.send({ message: 'Usuario actualizado', user: updatedUser });
+    } else {
+      res.status(404).send({ message: 'Usuario no encontrado' });
+    }
+  })
+);
+
+userRouter.delete(
+  '/:id',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const user = await User.findById(req.params.id);
+    if (user) {
+      if (user.email === 'admin@ecuastore.com') {
+        res
+          .status(400)
+          .send({ message: 'No se puede eliminar el usuario administrador' });
+        return;
+      }
+      await user.remove();
+      res.send({ message: 'Usuario eliminado' });
+    } else {
+      res.status(404).send({ message: 'Usuario no encontrado' });
+    }
+  })
+);
 userRouter.post(
   '/signin',
   expressAsyncHandler(async (req, res) => {
