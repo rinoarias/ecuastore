@@ -31,7 +31,15 @@ orderRouter.post(
       totalPrice: req.body.totalPrice,
       user: req.user._id,
     });
-
+    // console.log(newOrder);
+    req.body.orderItems.forEach(async (item) => {
+      const product = await Product.findById(item._id);
+      // console.log(product);
+      await Product.findOneAndUpdate(
+        { _id: item._id },
+        { countInStock: product.countInStock - item.quantity }
+      );
+    });
     const order = await newOrder.save();
     res.status(201).send({ message: 'Nuevo Pedido Creado', order });
   })
@@ -148,7 +156,16 @@ orderRouter.delete(
   isAdmin,
   expressAsyncHandler(async (req, res) => {
     const order = await Order.findById(req.params.id);
+
     if (order) {
+      order.orderItems.forEach(async (item) => {
+        const product = await Product.findById(item._id);
+        // console.log(product);
+        await Product.findOneAndUpdate(
+          { _id: item._id },
+          { countInStock: product.countInStock + item.quantity }
+        );
+      });
       await order.remove();
       res.send({ message: 'Pedido Eliminado' });
     } else {

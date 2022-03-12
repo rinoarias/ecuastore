@@ -14,6 +14,7 @@ import { Store } from '../Store';
 import { getError } from '../utils';
 import { toast } from 'react-toastify';
 import PayphoneButton from '../components/PayphoneButton';
+import Button from 'react-bootstrap/Button';
 
 function reducer(state, action) {
   switch (action.type) {
@@ -131,21 +132,48 @@ export default function OrderScreen() {
     }
   }, [order, userInfo, orderId, navigate, paypalDispatch, successPay]);
 
-  function getPayButton() {
-    return cart.paymentMethod === 'Payphone' ? (
-      <PayphoneButton
-        amount={order.totalPrice}
-        amountWithoutTax={order.taxPrice}
-      />
-    ) : (
-      <div>
-        <PayPalButtons
-          createOrder={createOrder}
-          onApprove={onApprove}
-          onError={onError}
-        ></PayPalButtons>
-      </div>
+  async function pushPayment(e) {
+    const { data } = await axios.put(
+      `/api/orders/${order._id}/pay`,
+      {},
+      {
+        headers: { Authorization: `Bearer ${userInfo.token}` },
+      }
     );
+
+    // view order details
+    //console.log(order);
+    dispatch({ type: 'PAY_SUCCESS', payload: data });
+  }
+
+  function getPayButton() {
+    switch (cart.paymentMethod) {
+      case 'Payphone':
+        return (
+          <PayphoneButton
+            amount={order.totalPrice}
+            amountWithoutTax={order.taxPrice}
+          />
+        );
+      case 'pagoAprobado':
+        return (
+          <>
+            <Button id="btn-pago" type="button" onClick={(e) => pushPayment(e)}>
+              Realizar Pago
+            </Button>
+          </>
+        );
+      default:
+        return (
+          <div>
+            <PayPalButtons
+              createOrder={createOrder}
+              onApprove={onApprove}
+              onError={onError}
+            ></PayPalButtons>
+          </div>
+        );
+    }
   }
 
   return loading ? (

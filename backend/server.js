@@ -7,6 +7,7 @@ import productRouter from './routes/productRoutes.js';
 import userRouter from './routes/userRoutes.js';
 import orderRouter from './routes/orderRoutes.js';
 import uploadRouter from './routes/uploadRoutes.js';
+import cors from 'cors';
 
 dotenv.config();
 
@@ -20,6 +21,14 @@ mongoose
   });
 
 const app = express();
+
+/*
+app.use(
+  cors({
+    origin: 'http://localhost',
+  })
+);
+*/
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

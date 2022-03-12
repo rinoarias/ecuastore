@@ -15,6 +15,12 @@ const data = {
       isAdmin: true,
     },
     {
+      name: 'Duval',
+      email: 'duval@ecuastore.com',
+      password: bcrypt.hashSync('12345678'),
+      isAdmin: true,
+    },
+    {
       name: 'Tommy',
       email: 'tommy.apolinario2018@uteq.edu.ec',
       password: bcrypt.hashSync('123456'),
