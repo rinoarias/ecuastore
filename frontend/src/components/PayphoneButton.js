@@ -5,7 +5,7 @@ const PayphoneButton = ({ amount, amountWithoutTax }) => {
   useEffect(() => {
     async function createData() {
       const response = await axios.get(
-        'http://localhost:5000/api/keys/payphone'
+        'https://ecuastore.herokuapp.com/api/keys/payphone'
       );
       const token = response.data;
       console.log(token);
