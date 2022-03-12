@@ -13,6 +13,7 @@ import MessageBox from '../components/MessageBox';
 import { Store } from '../Store';
 import { getError } from '../utils';
 import { toast } from 'react-toastify';
+import PayphoneButton from '../components/PayphoneButton';
 
 function reducer(state, action) {
   switch (action.type) {
@@ -37,7 +38,7 @@ function reducer(state, action) {
 }
 export default function OrderScreen() {
   const { state } = useContext(Store);
-  const { userInfo } = state;
+  const { userInfo, cart } = state;
 
   const params = useParams();
   const { id: orderId } = params;
@@ -129,6 +130,24 @@ export default function OrderScreen() {
       loadPaypalScript();
     }
   }, [order, userInfo, orderId, navigate, paypalDispatch, successPay]);
+
+  function getPayButton() {
+    return cart.paymentMethod === 'Payphone' ? (
+      <PayphoneButton
+        amount={order.totalPrice}
+        amountWithoutTax={order.taxPrice}
+      />
+    ) : (
+      <div>
+        <PayPalButtons
+          createOrder={createOrder}
+          onApprove={onApprove}
+          onError={onError}
+        ></PayPalButtons>
+      </div>
+    );
+  }
+
   return loading ? (
     <LoadingBox></LoadingBox>
   ) : error ? (
@@ -237,17 +256,7 @@ export default function OrderScreen() {
                 </ListGroup.Item>
                 {!order.isPaid && (
                   <ListGroup.Item>
-                    {isPending ? (
-                      <LoadingBox />
-                    ) : (
-                      <div>
-                        <PayPalButtons
-                          createOrder={createOrder}
-                          onApprove={onApprove}
-                          onError={onError}
-                        ></PayPalButtons>
-                      </div>
-                    )}
+                    {isPending ? <LoadingBox /> : getPayButton()}
                     {loadingPay && <LoadingBox></LoadingBox>}
                   </ListGroup.Item>
                 )}

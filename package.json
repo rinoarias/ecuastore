@@ -1,0 +1,22 @@
+{
+  "name": "ecuastore-ecommerce",
+  "version": "1.0.0",
+  "description": "Ecommerce usando React, Express, Node",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd backend && npm install  && cd ../frontend && npm install && npm run build",
+    "start": "node backend/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/rinoarias/ecuastore-ecommerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/rinoarias/ecuastore-ecommerce/issues"
+  },
+  "homepage": "https://gitlab.com/rinoarias/ecuastore-ecommerce#readme"
+}
