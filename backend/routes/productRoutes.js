@@ -18,6 +18,7 @@ productRouter.post(
     const newProduct = new Product({
       name: 'producto ejemplo ' + Date.now(),
       slug: 'producto-ejemplo-' + Date.now(),
+      measuringUnit: '1 unidad',
       image:
         'https://res.cloudinary.com/rinoarias/image/upload/v1647100520/glpceltbpt7fdbtsmmwz.jpg',
       price: 0,
@@ -48,6 +49,7 @@ productRouter.put(
     if (product) {
       product.name = req.body.name;
       product.slug = req.body.slug;
+      product.measuringUnit = req.body.measuringUnit;
       product.price = req.body.price;
       product.image = req.body.image;
       product.category = req.body.category;
@@ -55,7 +57,7 @@ productRouter.put(
       product.countInStock = req.body.countInStock;
       product.description = req.body.description;
       await product.save();
-      res.send({ message: 'Product Actualizado' });
+      res.send({ message: 'Producto Actualizado' });
     } else {
       res.status(404).send({ message: 'Producto no encontrado' });
     }

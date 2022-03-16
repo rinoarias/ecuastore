@@ -55,6 +55,7 @@ export default function ProductEditScreen() {
 
   const [name, setName] = useState('');
   const [slug, setSlug] = useState('');
+  const [measuringUnit, setMeasuringUnit] = useState('');
   const [price, setPrice] = useState('');
   const [image, setImage] = useState('');
   const [category, setCategory] = useState('');
@@ -69,6 +70,7 @@ export default function ProductEditScreen() {
         const { data } = await axios.get(`/api/products/${productId}`);
         setName(data.name);
         setSlug(data.slug);
+        setMeasuringUnit(data.measuringUnit);
         setPrice(data.price);
         setImage(data.image);
         setCategory(data.category);
@@ -96,6 +98,7 @@ export default function ProductEditScreen() {
           _id: productId,
           name,
           slug,
+          measuringUnit,
           price,
           image,
           category,
@@ -164,6 +167,14 @@ export default function ProductEditScreen() {
             <Form.Control
               value={slug}
               onChange={(e) => setSlug(e.target.value)}
+              required
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="measuringUnit">
+            <Form.Label>Unidad de medida</Form.Label>
+            <Form.Control
+              value={measuringUnit}
+              onChange={(e) => setMeasuringUnit(e.target.value)}
               required
             />
           </Form.Group>

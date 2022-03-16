@@ -147,6 +147,9 @@ function ProductScreen() {
             </ListGroup.Item>
             <ListGroup.Item>Precio : ${product.price}</ListGroup.Item>
             <ListGroup.Item>
+              Unidad de medida : {product.measuringUnit}
+            </ListGroup.Item>
+            <ListGroup.Item>
               Descripción:
               <p>{product.description}</p>
             </ListGroup.Item>

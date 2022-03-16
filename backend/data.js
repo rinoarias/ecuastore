@@ -33,56 +33,56 @@ const data = {
       name: 'Nike Slim shirt',
       slug: 'nike-slim-shirt',
       category: 'Shirts',
-      image:
-        'https://res.cloudinary.com/rinoarias/image/upload/v1647100520/glpceltbpt7fdbtsmmwz.jpg',
+      image: '/images/p1.jpg',
       price: 120,
       countInStock: 10,
       brand: 'Nike',
       rating: 0, //4.5,
-      numReviews: 10,
+      numReviews: 0, //10,
       description: 'high quality shirt',
+      measuringUnit: '1 unidad', // 750 ml, 500 gr, 1 kg
     },
     {
       //_id: '2',
       name: 'Adidas Fit Shirt',
       slug: 'adidas-fit-shirt',
       category: 'Shirts',
-      image:
-        'https://res.cloudinary.com/rinoarias/image/upload/v1647100520/glpceltbpt7fdbtsmmwz.jpg',
+      image: '/images/p2.jpg',
       price: 250,
       countInStock: 0,
       brand: 'Adidas',
       rating: 0, //4.0,
-      numReviews: 10,
+      numReviews: 0, //10,
       description: 'high quality product',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '3',
       name: 'Nike Slim Pant',
       slug: 'nike-slim-pant',
       category: 'Pants',
-      image:
-        'https://res.cloudinary.com/rinoarias/image/upload/v1647100520/glpceltbpt7fdbtsmmwz.jpg',
+      image: '/images/p3.jpg',
       price: 25,
       countInStock: 15,
       brand: 'Nike',
       rating: 0, //4.5,
-      numReviews: 14,
+      numReviews: 0, //14,
       description: 'high quality product',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '4',
       name: 'Adidas Fit Pant',
       slug: 'adidas-fit-pant',
       category: 'Pants',
-      image:
-        'https://res.cloudinary.com/rinoarias/image/upload/v1647100520/glpceltbpt7fdbtsmmwz.jpg',
+      image: '/images/p4.jpg',
       price: 65,
       countInStock: 5,
       brand: 'Puma',
       rating: 0, //4.5,
-      numReviews: 10,
+      numReviews: 0, //10,
       description: 'high quality product',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '5',
@@ -94,22 +94,24 @@ const data = {
       countInStock: 10,
       brand: 'ASUS',
       rating: 0, //4.0,
-      numReviews: 10,
+      numReviews: 0, //10,
       description: 'Monitor gamer Asus Tuf de 24plg 144hz nuevo',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '6',
       name: 'Audífonos in ear inalámbricos',
       slug: 'audifonos-in-ear-inalambricos',
       category: 'Electronicos',
-      image: '/images/p6.jpg',
+      image: '/images/P6.jpg',
       price: 50,
       countInStock: 5,
       brand: 'Huawei',
       rating: 0, //4.8,
-      numReviews: 17,
+      numReviews: 0, //17,
       description:
         'Audífonos in ear inalámbricos Huawei FreeBuds 4i carbon black',
+      measuringUnit: '1 unidad',
     },
 
     {
@@ -117,14 +119,15 @@ const data = {
       name: 'Cigarrera Con Encendedor Electrónico',
       slug: 'cigarrera-con-encendedor-electronico',
       category: 'Electronicos',
-      image: '/images/p7.jpg',
+      image: '/images/P7.jpg',
       price: 20,
       countInStock: 100,
       brand: 'Blynd',
       rating: 0, //4.8,
-      numReviews: 18,
+      numReviews: 0, //18,
       description:
         'Cigarrera con encendedor electrónico usb arco plasma 2 En 1',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '8',
@@ -136,8 +139,9 @@ const data = {
       countInStock: 11,
       brand: 'LENOVO',
       rating: 0, //4.8,
-      numReviews: 184,
+      numReviews: 0, //184,
       description: 'Laptop Lenovo IdeaPad D330-10IGL mineral gray táctil 10plg',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '9',
@@ -149,9 +153,10 @@ const data = {
       countInStock: 19,
       brand: 'TAURUS',
       rating: 0, //3.1,
-      numReviews: 185,
+      numReviews: 0, //185,
       description:
         'Jarra eléctrica Taurus Caronte plateada 1.8L Agua Caliente al Instante!',
+      measuringUnit: '1 unidad',
     },
 
     {
@@ -164,22 +169,24 @@ const data = {
       countInStock: 17,
       brand: 'Truper',
       rating: 0, //4.5,
-      numReviews: 14,
+      numReviews: 0, //14,
       description: 'Aspiradora Truper ASP 06 23L naranja negra-120V',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '11,
       name: 'Huawei Watch GT 2e 1.39pulgas',
-      slug: 'huawei-watch-gt-2e-1.39pulgadas',
+      slug: 'huawei-watch-gt-2e-139pulgadas',
       category: 'Electronicos',
       image: '/images/p11.jpg',
       price: 22,
       countInStock: 19,
       brand: 'Huawei',
       rating: 0, //4.2,
-      numReviews: 15,
+      numReviews: 0, //15,
       description:
         'Huawei Watch GT-2e-1.3plg caja 46mm de metal y plástico black stainless steel',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '12',
@@ -191,9 +198,10 @@ const data = {
       countInStock: 90,
       brand: 'AMAZON',
       rating: 0, //4.1,
-      numReviews: 18,
+      numReviews: 0, //18,
       description:
         'Amazon Fire TV Stick Lite de voz Full HD 8GB negro con 1GB de memoria RAM',
+      measuringUnit: '1 unidad',
     },
 
     {
@@ -206,9 +214,10 @@ const data = {
       countInStock: 13,
       brand: 'Microsoft',
       rating: 0, //4.0,
-      numReviews: 25,
+      numReviews: 0, //25,
       description:
         'Control joystick inalámbrico Microsoft Xbox Wireless Controller Series X|S robot white',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '14',
@@ -220,9 +229,10 @@ const data = {
       countInStock: 35,
       brand: 'EPSON',
       rating: 0, //3.8,
-      numReviews: 11,
+      numReviews: 0, //11,
       description:
         'Impresora a color simple función Epson EcoTank L1210 negra 110V',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '15',
@@ -234,9 +244,10 @@ const data = {
       countInStock: 55,
       brand: 'Samsung',
       rating: 0, //5.0,
-      numReviews: 118,
+      numReviews: 0, //118,
       description:
         'Tablet Samsung Galaxy Tab A7 Lite with Book Cover SM-T220 8.7plg 32GB gris 3GB de memoria RAM',
+      measuringUnit: '1 unidad',
     },
 
     // Categoría moda
@@ -251,9 +262,10 @@ const data = {
       countInStock: 10,
       brand: 'Wielsscca',
       rating: 0, //3.0,
-      numReviews: 20,
+      numReviews: 0, //20,
       description:
         'Material: poliéster. Sudadera con capucha para hombre con forro polar. Cálido, suave y ligero, adecuado para otoño o invierno',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '17',
@@ -265,8 +277,9 @@ const data = {
       countInStock: 13,
       brand: 'Amazon Essentials',
       rating: 0, //4.5,
-      numReviews: 11,
+      numReviews: 0, //11,
       description: 'Un corte clásico hecho de poliester para golf',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '18',
@@ -278,8 +291,9 @@ const data = {
       countInStock: 19,
       brand: 'Roosevelt',
       rating: 0, //4.5,
-      numReviews: 15,
+      numReviews: 0, //15,
       description: 'Preciosa Chamarra de vini piel tipo Biker de hombre',
+      measuringUnit: '1 unidad',
     },
 
     {
@@ -292,8 +306,9 @@ const data = {
       countInStock: 2,
       brand: 'Deus',
       rating: 0, //3.5,
-      numReviews: 58,
+      numReviews: 0, //58,
       description: 'Chamarra De Mezclilla Deslavada Con Botones Clasica Hombre',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '20',
@@ -305,8 +320,9 @@ const data = {
       countInStock: 29,
       brand: 'Neko',
       rating: 0, //4.9,
-      numReviews: 8,
+      numReviews: 0, //8,
       description: 'Chamarra Bomber Afelpada Forro En Peluche Suave Calientita',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '21',
@@ -318,8 +334,9 @@ const data = {
       countInStock: 29,
       brand: 'ET easytao',
       rating: 0, //4.7,
-      numReviews: 17,
+      numReviews: 0, //17,
       description: 'Mochila Mujer Moda Impermeable Antirrobo Bolsa Para Mujer',
+      measuringUnit: '1 unidad',
     },
 
     {
@@ -332,9 +349,10 @@ const data = {
       countInStock: 19,
       brand: 'Erez',
       rating: 0, //4.1,
-      numReviews: 177,
+      numReviews: 0, //177,
       description:
         'Botas De Vestir Casuales Para Caballero impermeable y antiraspaduras',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '23',
@@ -346,9 +364,10 @@ const data = {
       countInStock: 9,
       brand: 'Converse',
       rating: 0, //4.7,
-      numReviews: 1754,
+      numReviews: 0, //1754,
       description:
         'Tenis Converse M9160c Caña Alta Clásico Negro Unisex alto Estilo y sutil',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '24',
@@ -360,8 +379,9 @@ const data = {
       countInStock: 91,
       brand: 'Maxshow',
       rating: 0, //4.2,
-      numReviews: 14,
+      numReviews: 0, //14,
       description: 'Tenis Deportivos De Malla Transpirable Para Mujer',
+      measuringUnit: '1 unidad',
     },
 
     {
@@ -374,8 +394,9 @@ const data = {
       countInStock: 38,
       brand: 'Levis',
       rating: 0, //4.5,
-      numReviews: 84,
+      numReviews: 0, //84,
       description: 'Tenis Deportivos De Malla Transpirable Para Mujer',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '26',
@@ -387,9 +408,10 @@ const data = {
       countInStock: 27,
       brand: 'Dayshine',
       rating: 0, //5.0,
-      numReviews: 54,
+      numReviews: 0, //54,
       description:
         'Saco De Boxeo Profesional De Boxeo Alta Capacidad De 120 Cm',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '27',
@@ -401,8 +423,9 @@ const data = {
       countInStock: 2,
       brand: 'Gonzo',
       rating: 0, //3.3,
-      numReviews: 84,
+      numReviews: 0, //84,
       description: 'Careta De Boxeo Profesional Alta Densidad',
+      measuringUnit: '1 unidad',
     },
 
     {
@@ -415,9 +438,10 @@ const data = {
       countInStock: 4,
       brand: 'Altera',
       rating: 0, //4.3,
-      numReviews: 84,
+      numReviews: 0, //84,
       description:
         'Kit de Pesas Barra Recta, Barra Z, Par de Mancuernas, Discos 70LBS Combo No.1',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '29',
@@ -429,9 +453,10 @@ const data = {
       countInStock: 25,
       brand: 'Rinat',
       rating: 0, //4.7,
-      numReviews: 81,
+      numReviews: 0, //81,
       description:
         'Guante Portero Rinat The Boss Alpha Adulto latex super suave',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '30',
@@ -443,9 +468,10 @@ const data = {
       countInStock: 5,
       brand: 'Feita',
       rating: 0, //4.9,
-      numReviews: 91,
+      numReviews: 0, //91,
       description:
         'Bicicleta fija Altera Spal ALT550-6 para spinning gris y negra',
+      measuringUnit: '1 unidad',
     },
 
     {
@@ -458,8 +484,9 @@ const data = {
       countInStock: 53,
       brand: 'Blazer',
       rating: 0, //4.3,
-      numReviews: 9,
+      numReviews: 0, //9,
       description: 'Patines Profesionales portapatines envio regalo Gratis',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '32',
@@ -471,8 +498,9 @@ const data = {
       countInStock: 3,
       brand: 'Mercurio',
       rating: 0, //4.1,
-      numReviews: 3,
+      numReviews: 0, //3,
       description: 'Mountain bike Mercurio MTB Recreacion Ranger pro 2020 R29',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '33',
@@ -484,8 +512,9 @@ const data = {
       countInStock: 2,
       brand: 'Bodyfit',
       rating: 0, //4.9,
-      numReviews: 9,
+      numReviews: 0, //9,
       description: 'Par Mancuernas Pesas Hexagonal Recubierta 20lb 9.07kgs',
+      measuringUnit: '1 unidad',
     },
 
     {
@@ -498,9 +527,10 @@ const data = {
       countInStock: 2,
       brand: 'AM7',
       rating: 0, //2.9,
-      numReviews: 15,
+      numReviews: 0, //15,
       description:
         'Bandas Elasticas De Resistencia Ejercicios Kit De 11 Piezas',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '35',
@@ -512,8 +542,9 @@ const data = {
       countInStock: 55,
       brand: 'Altera',
       rating: 0, //3.9,
-      numReviews: 14,
+      numReviews: 0, //14,
       description: 'Caminadora electrica Altera CE CE-5420 110V Color Blanco',
+      measuringUnit: '1 unidad',
     },
 
     {
@@ -526,8 +557,9 @@ const data = {
       countInStock: 5,
       brand: 'puntabelleza',
       rating: 0, //3.5,
-      numReviews: 10,
+      numReviews: 0, //10,
       description: 'Capa Profesional Para Barberia, Salon, Estetica Negra',
+      measuringUnit: '1 unidad',
     },
 
     {
@@ -540,8 +572,9 @@ const data = {
       countInStock: 17,
       brand: 'IMPORTEEK',
       rating: 0, //4.5,
-      numReviews: 100,
+      numReviews: 0, //100,
       description: 'Set Tijeras Peines Estetica Profesional Estilista Barbero',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '38',
@@ -553,8 +586,9 @@ const data = {
       countInStock: 15,
       brand: 'Kingsman',
       rating: 0, //4.1,
-      numReviews: 19,
+      numReviews: 0, //19,
       description: 'Set Tijeras Peines Estetica Profesional Estilista Barbero',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '39',
@@ -566,8 +600,9 @@ const data = {
       countInStock: 11,
       brand: 'Kinkete',
       rating: 0, //4.7,
-      numReviews: 9,
+      numReviews: 0, //9,
       description: 'Caja Almacenadora De Cosméticos Y Artículos De Belleza',
+      measuringUnit: '1 unidad',
     },
 
     {
@@ -580,8 +615,9 @@ const data = {
       countInStock: 110,
       brand: 'VerdeUrbano',
       rating: 0, //4.5,
-      numReviews: 97,
+      numReviews: 0, //97,
       description: 'Exfoliante De Lavanda mas 1 Manteca De Magnesio',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '41',
@@ -593,8 +629,9 @@ const data = {
       countInStock: 18,
       brand: 'Nanofort',
       rating: 0, //2.9,
-      numReviews: 7,
+      numReviews: 0, //7,
       description: 'Carrito Estetica Auxiliar Carro Salon Belleza Barbería',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '42',
@@ -606,8 +643,9 @@ const data = {
       countInStock: 187,
       brand: 'Letmex',
       rating: 0, //4.9,
-      numReviews: 784,
+      numReviews: 0, //784,
       description: 'Lavacabeza Portatil Lavabo Tarja Salon De Belleza',
+      measuringUnit: '1 unidad',
     },
 
     {
@@ -620,8 +658,9 @@ const data = {
       countInStock: 108,
       brand: 'Puntabelleza',
       rating: 0, //3.7,
-      numReviews: 24,
+      numReviews: 0, //24,
       description: 'Manguera Para Lavacabezas De Estetica mas baberia mas Spa',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '44',
@@ -633,8 +672,9 @@ const data = {
       countInStock: 108,
       brand: 'PBelleza',
       rating: 0, //4.7,
-      numReviews: 28,
+      numReviews: 0, //28,
       description: 'Cepillo De Limpieza De Cortes De Cabello Degradados Gold',
+      measuringUnit: '1 unidad',
     },
     {
       //_id: '45',
@@ -646,8 +686,9 @@ const data = {
       countInStock: 108,
       brand: 'PBelleza',
       rating: 0, //4.7,
-      numReviews: 28,
+      numReviews: 0, //28,
       description: 'Cepillo De Limpieza De Cortes De Cabello Degradados Gold',
+      measuringUnit: '1 unidad',
     },
 
     {
@@ -660,8 +701,9 @@ const data = {
       countInStock: 108,
       brand: 'Verde Valle',
       rating: 0, //5.0,
-      numReviews: 29,
+      numReviews: 0, //29,
       description: 'Pure De Papa Verde Valle',
+      measuringUnit: '2 kg',
     },
     {
       //_id: '47',
@@ -673,8 +715,9 @@ const data = {
       countInStock: 18,
       brand: 'satoru',
       rating: 0, //5.0,
-      numReviews: 29,
+      numReviews: 0, //29,
       description: 'Arroz Para Sushi 700 G Satoru',
+      measuringUnit: '700 gr',
     },
     {
       //_id: '48',
@@ -686,22 +729,24 @@ const data = {
       countInStock: 10,
       brand: 'YUKIA',
       rating: 0, //4.8,
-      numReviews: 19,
+      numReviews: 0, //19,
       description: 'Salsa Teriyaki Yukai Botella De 500 Mls Tienda Oficial',
+      measuringUnit: '100 gr',
     },
 
     {
       //_id: '49',
       name: 'Salsa Verde La Costeña 450 Gr',
-      slug: 'salsa-verde-la-costeña-450gr',
+      slug: 'salsa-verde-la-costena-450gr',
       category: 'Alimentos',
       image: '/images/p49.jpg',
       price: 3.17,
       countInStock: 19,
       brand: 'LaCosteña',
       rating: 0, //4.1,
-      numReviews: 19,
+      numReviews: 0, //19,
       description: 'Salsa Verde La Costeña 450 Gr',
+      measuringUnit: '450 gr',
     },
     {
       //_id: '50',
@@ -713,8 +758,9 @@ const data = {
       countInStock: 10,
       brand: 'Heinz',
       rating: 0, //4.18,
-      numReviews: 119,
+      numReviews: 0, //119,
       description: 'Salsa Catsup Heinz Ketchup 2 Piezas De 1.13 Kg C/u',
+      measuringUnit: '1.3 kg',
     },
     {
       //_id: '51',
@@ -726,8 +772,9 @@ const data = {
       countInStock: 58,
       brand: 'Jimmy',
       rating: 0, //5.0,
-      numReviews: 100,
+      numReviews: 0, //100,
       description: 'Crema Jimmy Tartufi De Hongos Porcini 90Gr',
+      measuringUnit: '90 gr',
     },
 
     {
@@ -740,8 +787,9 @@ const data = {
       countInStock: 8,
       brand: 'SanMarcos',
       rating: 0, //4.0,
-      numReviews: 14,
+      numReviews: 0, //14,
       description: 'Salsa Casera San Marcos Chipotle 500 G',
+      measuringUnit: '500 gr',
     },
     {
       //_id: '53',
@@ -753,8 +801,9 @@ const data = {
       countInStock: 145,
       brand: 'Campbells',
       rating: 0, //4.6,
-      numReviews: 198,
+      numReviews: 0, //198,
       description: 'Salsa Casera San Marcos Chipotle 500 G',
+      measuringUnit: '500 gr',
     },
     {
       //_id: '54',
@@ -766,8 +815,9 @@ const data = {
       countInStock: 145,
       brand: 'Lipton',
       rating: 0, //4.9,
-      numReviews: 118,
+      numReviews: 0, //118,
       description: 'Sopa Instantanea Sabor Cebolla Kosher Lipton',
+      measuringUnit: '100 gr',
     },
 
     {
@@ -780,34 +830,37 @@ const data = {
       countInStock: 157,
       brand: 'MoriNu',
       rating: 0, //4.4,
-      numReviews: 11,
+      numReviews: 0, //11,
       description: 'Tofu Extra Firme Mori nu',
+      measuringUnit: '349 gr',
     },
     {
       //_id: '56',
       name: 'Agua Natural Burst',
-      slug: 'agua Natural burst',
+      slug: 'agua-Natural-burst',
       category: 'Bebidas',
       image: '/images/p56.jpg',
       price: 1.0,
       countInStock: 183,
       brand: 'Burs',
       rating: 0, //4.8,
-      numReviews: 59,
+      numReviews: 0, //59,
       description: 'Agua Natural Burst 1Litro',
+      measuringUnit: '1 l',
     },
     {
       //_id: '57',
       name: 'Bebida Boing Minibrick',
-      slug: 'bebida boing minibrick',
+      slug: 'bebida-boing-minibrick',
       category: 'Bebidas',
       image: '/images/p57.jpg',
       price: 1.5,
       countInStock: 395,
       brand: 'Boing',
       rating: 0, //4.8,
-      numReviews: 9,
+      numReviews: 0, //9,
       description: 'Bebida Boing Minibrick 125 Ml Tienda Oficial',
+      measuringUnit: '125 ml',
     },
 
     {
@@ -820,8 +873,9 @@ const data = {
       countInStock: 387,
       brand: 'Baileys',
       rating: 0, //4.9,
-      numReviews: 95,
+      numReviews: 0, //95,
       description: 'Crema De Whisky Baileys Original 700 Ml',
+      measuringUnit: '700 ml',
     },
     {
       //_id: '59',
@@ -833,8 +887,9 @@ const data = {
       countInStock: 537,
       brand: 'Baileys',
       rating: 0, //3.0,
-      numReviews: 158,
+      numReviews: 0, //158,
       description: 'Leche Nutri 1 Lt Nutrileche',
+      measuringUnit: '1 lt',
     },
     {
       //_id: '60',
@@ -846,8 +901,9 @@ const data = {
       countInStock: 300,
       brand: 'Buchanans',
       rating: 0, //5.0,
-      numReviews: 95,
+      numReviews: 0, //95,
       description: 'Buchanans Special 18 años Blended Scotch escoces 750 mL',
+      measuringUnit: '750 ml',
     },
 
     {
@@ -860,8 +916,9 @@ const data = {
       countInStock: 32,
       brand: 'SlimFast',
       rating: 0, //2.7,
-      numReviews: 55,
+      numReviews: 0, //55,
       description: 'Slimfast Malteada Original 1.36 Kg Vitaminas Y Minerales',
+      measuringUnit: '1.36 kg',
     },
     {
       //_id: '62',
@@ -873,9 +930,10 @@ const data = {
       countInStock: 19,
       brand: 'DonRamon',
       rating: 0, //4.7,
-      numReviews: 105,
+      numReviews: 0, //105,
       description:
         'Tequila Don Ramon Plata Punta Diamante El Señor Don Tequila',
+      measuringUnit: '750 ml',
     },
     {
       //_id: '63',
@@ -887,36 +945,40 @@ const data = {
       countInStock: 59,
       brand: 'Jinro',
       rating: 0, //4.2,
-      numReviews: 40,
+      numReviews: 0, //40,
       description:
         'Soju Marca Jinro 360ml Licor Arroz Corea Variedad De Sabores',
+      measuringUnit: '360 ml',
     },
     {
       //_id: '64',
       name: 'Electrolit Suero Rehidratante',
-      slug: 'electrolit suero rehidratante',
+      slug: 'electrolit-suero-rehidratante',
       category: 'Bebidas',
       image: '/images/p64.jpg',
       price: 5.19,
       countInStock: 149,
       brand: 'Electrolit',
       rating: 0, //4.7,
-      numReviews: 400,
+      numReviews: 0, //400,
       description: 'Electrolit Suero Rehidratante Sabor Fresa 625 Ml',
+      measuringUnit: '625 ml',
     },
     {
       //_id: '65',
       name: 'Johnnie Walker Red Label',
-      slug: 'johnnie walker red label',
+      slug: 'johnnie-walker-red-label',
       category: 'Bebidas',
       image: '/images/p65.jpg',
       price: 55.49,
       countInStock: 349,
       brand: 'JohnnieWalker',
       rating: 0, //4.9,
-      numReviews: 400,
+      numReviews: 0, //400,
       description: 'Johnnie Walker Red Label Blended Scotch escocés 1 L',
+      measuringUnit: '1 l',
     },
   ],
 };
+
 export default data;
